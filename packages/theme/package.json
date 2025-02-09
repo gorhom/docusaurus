@@ -1,7 +1,7 @@
 {
   "name": "@gorhom/docusaurus-theme",
   "description": "A custom theme based on classic theme.",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "author": "Mo Gorhom <gorhom.dev@gmail.com>",
   "license": "MIT",
   "main": "lib/index.js",
@@ -26,13 +26,13 @@
   "devDependencies": {
     "@types/lodash": "4.17.7",
     "@types/nprogress": "0.2.3",
-		"@types/react": "19.0.8",
+    "@types/react": "19.0.8",
     "fs-extra": "11.2.0",
     "lodash": "4.17.21",
     "nprogress": "0.2.0",
     "postcss": "8.4.26",
-		"react": "19.0.0",
-		"react-dom": "19.0.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "typescript": "5.6.2"
   }
 }

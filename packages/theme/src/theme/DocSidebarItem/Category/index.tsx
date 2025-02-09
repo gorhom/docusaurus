@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, {type ComponentProps, useEffect, useMemo} from 'react';
+import React, {type ComponentProps, useEffect, useMemo, type ReactNode} from 'react';
 import clsx from 'clsx';
 import {
   ThemeClassNames,
@@ -116,7 +116,7 @@ export default function DocSidebarItemCategory({
   level,
   index,
   ...props
-}: Props): JSX.Element {
+}: Props): ReactNode {
   const {items, label, collapsible, className, href} = item;
   const {
     docs: {

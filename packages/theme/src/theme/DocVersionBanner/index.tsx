@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, {type ComponentType} from 'react';
+import React, {type ComponentType, type ReactNode} from 'react';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Link from '@docusaurus/Link';
@@ -121,7 +121,7 @@ function DocVersionBannerEnabled({
   versionMetadata,
 }: Props & {
   versionMetadata: PropVersionMetadata;
-}): JSX.Element {
+}): ReactNode {
   const {
     siteConfig: {title: siteTitle},
   } = useDocusaurusContext();
@@ -164,7 +164,7 @@ function DocVersionBannerEnabled({
 
 export default function DocVersionBanner({
   className,
-}: Props): JSX.Element | null {
+}: Props): ReactNode | null {
   const versionMetadata = useDocsVersion();
   if (versionMetadata.banner) {
     return (

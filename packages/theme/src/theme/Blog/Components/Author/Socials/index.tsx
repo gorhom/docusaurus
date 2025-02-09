@@ -6,7 +6,7 @@
  */
 
 import type {ComponentType} from 'react';
-import React from 'react';
+import React, {type ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import type {Props} from '@theme/Blog/Components/Author/Socials';
@@ -54,7 +54,7 @@ export default function BlogAuthorSocials({
   author,
 }: {
   author: Props['author'];
-}): JSX.Element {
+}): ReactNode {
   const entries = Object.entries(author.socials ?? {});
   return (
     <div className={styles.authorSocials}>

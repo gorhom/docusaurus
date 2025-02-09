@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React, {type ReactNode} from 'react';
 import clsx from 'clsx';
 import {useBlogPost} from '@docusaurus/plugin-content-blog/client';
 import BlogPostItemContainer from '@theme/BlogPostItem/Container';
@@ -23,7 +23,7 @@ function useContainerClassName() {
 export default function BlogPostItem({
   children,
   className,
-}: Props): JSX.Element {
+}: Props): ReactNode {
   const containerClassName = useContainerClassName();
   return (
     <BlogPostItemContainer className={clsx(containerClassName, className)}>

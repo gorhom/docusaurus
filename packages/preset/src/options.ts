@@ -9,9 +9,11 @@ import type {Options as DocsPluginOptions} from '@docusaurus/plugin-content-docs
 import type {Options as BlogPluginOptions} from '@docusaurus/plugin-content-blog';
 import type {Options as PagesPluginOptions} from '@docusaurus/plugin-content-pages';
 import type {Options as SitemapPluginOptions} from '@docusaurus/plugin-sitemap';
+import type {Options as SVGRPluginOptions} from '@docusaurus/plugin-svgr';
 import type {Options as GAPluginOptions} from '@docusaurus/plugin-google-analytics';
 import type {Options as GtagPluginOptions} from '@docusaurus/plugin-google-gtag';
 import type {Options as GTMPluginOptions} from '@docusaurus/plugin-google-tag-manager';
+// @ts-ignore
 import type {Options as ThemeOptions} from '@gorhom/docusaurus-theme';
 import type {ThemeConfig as BaseThemeConfig} from '@docusaurus/types';
 import type {UserThemeConfig as ClassicThemeConfig} from '@docusaurus/theme-common';
@@ -31,6 +33,8 @@ export type Options = {
   pages?: false | PagesPluginOptions;
   /** Options for `@docusaurus/plugin-sitemap`. Use `false` to disable. */
   sitemap?: false | SitemapPluginOptions;
+  /** Options for `@docusaurus/plugin-svgr`. Use `false` to disable. */
+  svgr?: false | SVGRPluginOptions;
   /** Options for `@docusaurus/theme-classic`. */
   theme?: ThemeOptions;
   /**

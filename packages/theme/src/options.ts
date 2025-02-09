@@ -7,6 +7,7 @@
 
 import {themes} from 'prism-react-renderer';
 import {Joi, URISchema} from '@docusaurus/utils-validation';
+// @ts-ignore
 import type {Options, PluginOptions} from '@gorhom/docusaurus-theme';
 import type {ThemeConfig} from '@docusaurus/theme-common';
 import type {
@@ -308,6 +309,7 @@ const FooterLinkItemSchema = Joi.object({
   href: URISchema,
   html: Joi.string(),
   label: Joi.string(),
+  className: Joi.string(),
 })
   .xor('to', 'href', 'html')
   .with('to', 'label')
@@ -316,6 +318,12 @@ const FooterLinkItemSchema = Joi.object({
   // We allow any unknown attributes on the links (users may need additional
   // attributes like target, aria-role, data-customAttribute...)
   .unknown();
+
+const FooterColumnItemSchema = Joi.object({
+  title: Joi.string().allow(null).default(null),
+  className: Joi.string(),
+  items: Joi.array().items(FooterLinkItemSchema).default([]),
+});
 
 const LogoSchema = Joi.object({
   alt: Joi.string().allow(''),
@@ -384,12 +392,7 @@ export const ThemeConfigSchema = Joi.object<ThemeConfig>({
     logo: LogoSchema,
     copyright: Joi.string(),
     links: Joi.alternatives(
-      Joi.array().items(
-        Joi.object({
-          title: Joi.string().allow(null).default(null),
-          items: Joi.array().items(FooterLinkItemSchema).default([]),
-        }),
-      ),
+      Joi.array().items(FooterColumnItemSchema),
       Joi.array().items(FooterLinkItemSchema),
     )
       .messages({

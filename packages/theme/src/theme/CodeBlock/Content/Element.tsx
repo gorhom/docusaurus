@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React, {type ReactNode} from 'react';
 import clsx from 'clsx';
 import Container from '@theme/CodeBlock/Container';
 import type {Props} from '@theme/CodeBlock/Content/Element';
@@ -18,7 +18,7 @@ import styles from './styles.module.css';
 export default function CodeBlockJSX({
   children,
   className,
-}: Props): JSX.Element {
+}: Props): ReactNode {
   return (
     <Container
       as="pre"

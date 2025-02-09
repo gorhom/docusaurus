@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React, {type ReactNode} from 'react';
 import clsx from 'clsx';
 import {
   PageMetadata,
@@ -20,7 +20,7 @@ import Heading from '@theme/Heading';
 
 function DocTagsListPageMetadata({
   title,
-}: Props & {title: string}): JSX.Element {
+}: Props & {title: string}): ReactNode {
   return (
     <>
       <PageMetadata title={title} />
@@ -32,7 +32,7 @@ function DocTagsListPageMetadata({
 function DocTagsListPageContent({
   tags,
   title,
-}: Props & {title: string}): JSX.Element {
+}: Props & {title: string}): ReactNode {
   return (
     <HtmlClassNameProvider
       className={clsx(ThemeClassNames.page.docsTagsListPage)}>
@@ -48,7 +48,7 @@ function DocTagsListPageContent({
   );
 }
 
-export default function DocTagsListPage(props: Props): JSX.Element {
+export default function DocTagsListPage(props: Props): ReactNode {
   const title = translateTagsPageTitle();
   return (
     <>

@@ -21,18 +21,18 @@
     "clone": "rsync -r --ignore-existing ../../node_modules/@docusaurus/theme-classic/src/theme/ ./src/theme"
   },
   "dependencies": {
-    "@docusaurus/theme-classic": "3.5.2"
+    "@docusaurus/theme-classic": "3.7.0"
   },
   "devDependencies": {
     "@types/lodash": "4.17.7",
     "@types/nprogress": "0.2.3",
-    "@types/react": "18.3.5",
+		"@types/react": "19.0.8",
     "fs-extra": "11.2.0",
     "lodash": "4.17.21",
     "nprogress": "0.2.0",
     "postcss": "8.4.26",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+		"react": "19.0.0",
+		"react-dom": "19.0.0",
     "typescript": "5.6.2"
   }
 }
